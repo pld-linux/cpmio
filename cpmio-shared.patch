@@ -1,0 +1,39 @@
+--- cpmio-1.1.1/lib/Makefile.am.orig	2001-07-07 15:14:31.000000000 +0200
++++ cpmio-1.1.1/lib/Makefile.am	2003-08-16 16:23:41.311514832 +0200
+@@ -2,6 +2,6 @@
+ 
+ INCLUDES=-I$(top_srcdir)/include
+ 
+-lib_LIBRARIES=libcpmio.a
+-libcpmio_a_SOURCES = conbdos.c  cpmio_i.h  termansi.c  termcore.h \
++lib_LTLIBRARIES=libcpmio.la
++libcpmio_la_SOURCES = conbdos.c  cpmio_i.h  termansi.c  termcore.h \
+                      cpmio.c    iosig.c    termcore.c  termvt52.c
+--- cpmio-1.1.1/check/Makefile.am.orig	2001-07-07 15:15:30.000000000 +0200
++++ cpmio-1.1.1/check/Makefile.am	2003-08-16 16:24:04.014063520 +0200
+@@ -1,7 +1,7 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+ INCLUDES=-I$(top_srcdir)/include
+-LDADD=../lib/libcpmio.a
++LDADD=../lib/libcpmio.la
+ 
+ check_PROGRAMS = testio
+ testio_SOURCES = testio.c
+--- cpmio-1.1.1/configure.in.orig	2003-03-28 21:04:25.000000000 +0100
++++ cpmio-1.1.1/configure.in	2003-08-16 16:22:55.046548176 +0200
+@@ -15,11 +15,11 @@
+ AC_PROG_CPP
+ AC_PROG_INSTALL
+ AC_PROG_MAKE_SET
+-AC_PROG_RANLIB
++AC_PROG_LIBTOOL
+ 
+ dnl Checks for libraries.
+-AC_CHECK_LIB(ncurses, printw, LIBS="-lncurses $LIBS")
+-AC_CHECK_LIB(curses,  printw, LIBS="-lcurses  $LIBS")
++AC_CHECK_LIB(ncurses, printw, LIBS="-lncurses $LIBS",
++[AC_CHECK_LIB(curses,  printw, LIBS="-lcurses  $LIBS")])
+ if test x"$with_readline" = x"yes"; then
+   CFLAGS="$CFLAGS -DUSE_READLINE"
+   AC_CHECK_LIB(readline, readline)
