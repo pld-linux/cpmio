@@ -2,7 +2,7 @@ Summary:	CPMIO - console access functions of an emulated CP/M computer
 Summary(pl):	CPMIO - funcje dostêpu do konsoli emulowanego komputera CP/M
 Name:		cpmio
 Version:	1.1.1
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.seasip.demon.co.uk/Unix/Zxcc/%{name}-%{version}.tar.gz
