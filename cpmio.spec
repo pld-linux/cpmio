@@ -27,7 +27,7 @@ emulowanego komputera CP/M na maszynie uniksowej.
 Summary:	Header files for cpmio library
 Summary(pl):	Pliki nag³ówkowe biblioteki cpmio
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	readline-devel
 
 %description devel
@@ -40,7 +40,7 @@ Pliki nag³ówkowe biblioteki cpmio.
 Summary:	Static cpmio library
 Summary(pl):	Statyczna biblioteka cpmio
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static cpmio library.
