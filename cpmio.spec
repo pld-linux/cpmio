@@ -1,5 +1,5 @@
 Summary:	CPMIO - console access functions of an emulated CP/M computer
-Summary(pl.UTF-8):   CPMIO - funcje dostępu do konsoli emulowanego komputera CP/M
+Summary(pl.UTF-8):	CPMIO - funcje dostępu do konsoli emulowanego komputera CP/M
 Name:		cpmio
 Version:	1.1.1
 Release:	2
@@ -25,7 +25,7 @@ emulowanego komputera CP/M na maszynie uniksowej.
 
 %package devel
 Summary:	Header files for cpmio library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki cpmio
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki cpmio
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	readline-devel
@@ -38,7 +38,7 @@ Pliki nagłówkowe biblioteki cpmio.
 
 %package static
 Summary:	Static cpmio library
-Summary(pl.UTF-8):   Statyczna biblioteka cpmio
+Summary(pl.UTF-8):	Statyczna biblioteka cpmio
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
