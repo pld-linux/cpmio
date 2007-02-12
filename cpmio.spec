@@ -1,5 +1,5 @@
 Summary:	CPMIO - console access functions of an emulated CP/M computer
-Summary(pl):	CPMIO - funcje dostêpu do konsoli emulowanego komputera CP/M
+Summary(pl.UTF-8):   CPMIO - funcje dostÄ™pu do konsoli emulowanego komputera CP/M
 Name:		cpmio
 Version:	1.1.1
 Release:	2
@@ -19,13 +19,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 CPMIO is a library intended to support the console access functions of
 an emulated CP/M computer, on a Unix box.
 
-%description -l pl
-CPMIO to biblioteka maj±ca obs³ugiwaæ funkcje dostêpu do konsoli
+%description -l pl.UTF-8
+CPMIO to biblioteka majÄ…ca obsÅ‚ugiwaÄ‡ funkcje dostÄ™pu do konsoli
 emulowanego komputera CP/M na maszynie uniksowej.
 
 %package devel
 Summary:	Header files for cpmio library
-Summary(pl):	Pliki nag³ówkowe biblioteki cpmio
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki cpmio
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	readline-devel
@@ -33,19 +33,19 @@ Requires:	readline-devel
 %description devel
 Header files for cpmio library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki cpmio.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki cpmio.
 
 %package static
 Summary:	Static cpmio library
-Summary(pl):	Statyczna biblioteka cpmio
+Summary(pl.UTF-8):   Statyczna biblioteka cpmio
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static cpmio library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka cpmio.
 
 %prep
